@@ -1,3 +1,71 @@
-h1{
-    color: blueviolet;
+/* set css */
+:root{
+    --light_black: #334141;
+    --dark_black:#333e48;
+}
+body,html{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+div,
+ul,
+header,
+section,
+nav,
+main{
+    box-sizing: border-box;
+    position: relative;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 1200px;
+    margin: auto;
+}
+#header {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.541);
+}
+#header .content {
+    display: flex;
+}
+#header .content .greating {
+}
+#header .content .greating p{
+    color: var(--light_black);
+    font-size: 14px;
+    margin: 15px 0px;
+}
+#header .short_links {}
+
+#header .content .short_links ul {
+   height: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+    align-items: center;
+}
+#header .content .short_links ul li{}
+#header .content .short_links ul li i{
+    color: var(--light_black);
+    font-size: 14px;
+}
+#header .content.short_links ul li a{
+    color: var(--light_black);
+    font-size: 14px;
+    transition-duration: 3s;
+    font-weight: 600px;
+}
+#header .content.short_links ul li a :hover{
+    color: var(--light_black);
+    font-weight: 600px;
 }
