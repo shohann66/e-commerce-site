@@ -1,21 +1,21 @@
-/* set css */
-:root{
+/* Reset css */
+:root {
     --light_black: #334141;
-    --dark_black:#333e48;
+    --dark_black: #333e48;
 }
 body,html{
-    margin: 0;
-    padding: 0;
     outline: 0;
-    overflow-x: hidden;
+    padding: 0;
+    margin:0;
+   
     font-family: 'Open Sans', sans-serif;
 }
-
 div,
 ul,
 header,
 section,
 nav,
+footer,
 main{
     box-sizing: border-box;
     position: relative;
@@ -32,40 +32,57 @@ a{
     width: 1200px;
     margin: auto;
 }
-#header {
-    border-bottom: 1px solid rgba(128, 128, 128, 0.541);
+
+
+/* Header css part */
+#header{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.377);
 }
-#header .content {
+#header .content{
     display: flex;
 }
-#header .content .greating {
+#header .content .greeting{
+    
 }
-#header .content .greating p{
+#header .content .greeting p{
     color: var(--light_black);
     font-size: 14px;
     margin: 15px 0px;
 }
-#header .short_links {}
-
-#header .content .short_links ul {
-   height: 100%;
+#header .content .short_links{
+    flex: 1;
+}
+#header .content .short_links ul{
+    height: 100%;
     display: flex;
     gap: 30px;
     justify-content: flex-end;
     align-items: center;
+    
 }
-#header .content .short_links ul li{}
+#header .content .short_links ul li{
+    position: relative;
+}
+#header .content .short_links ul li a{
+    text-decoration: none;
+    color: var(--light_black);
+    font-size: 14px;
+    transition-duration: 1s;
+    font-weight: 400;
+}
+#header .content .short_links ul li a:hover{
+    color: rgb(3, 3, 3);
+    font-weight: 600;
+}
 #header .content .short_links ul li i{
     color: var(--light_black);
     font-size: 14px;
 }
-#header .content.short_links ul li a{
-    color: var(--light_black);
-    font-size: 14px;
-    transition-duration: 3s;
-    font-weight: 600px;
+#header .content .short_links ul ul{
+    position: absolute;
+    left: -9999px;
+    display: block;
 }
-#header .content.short_links ul li a :hover{
-    color: var(--light_black);
-    font-weight: 600px;
+#header .content .short_links ul li:hover ul{
+    left: 15px;
 }
